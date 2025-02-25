@@ -1,0 +1,24 @@
+<!-- core/templates/core/home.html -->
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h2>Bienvenue sur l'application de facilitation des retraits</h2>
+        <p>Veuillez sélectionner votre profil :</p>
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <a href="{% url 'agent:select_operator' %}" class="btn btn-primary btn-lg btn-block btn-main">
+                    <i class="fas fa-user-tie"></i> Agent
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="{% url 'client:scan' %}" class="btn btn-success btn-lg btn-block btn-main">
+                    <i class="fas fa-user"></i> Client
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
